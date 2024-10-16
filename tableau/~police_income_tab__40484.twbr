@@ -1,0 +1,1486 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20241.24.0524.1403                               -->
+<workbook original-version='18.1' source-build='2024.1.3 (20241.24.0524.1403)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SpatialFileLayer />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='zipcodes' inline='true' name='federated.1y9h4311ar9l7w1fo9et10gsqsq7' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='police_vs_income' name='textscan.0xvtyqe0olyodn1cdkw7a04v2fbj'>
+            <connection class='textscan' directory='C:/Users/Sean/Documents/DA12/Capstone/Metro-Nashville-Police-Response-Times-Capstone/data' filename='police_vs_income.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='zipcodes' name='ogrdirect.1cbk5br0axe93c10s9wxd0uhrawt'>
+            <connection class='ogrdirect' directory='C:/Users/Sean/Documents/DA12/Capstone/Metro-Nashville-Police-Response-Times-Capstone/data' filename='zipcodes.geojson' password='' server='' tablename='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[police_vs_income.csv].[zipcode]' />
+              <expression op='[zipcodes.geojson].[zip]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.0xvtyqe0olyodn1cdkw7a04v2fbj' name='police_vs_income.csv' table='[police_vs_income#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='zipcode' ordinal='0' />
+              <column datatype='integer' name='survey_count' ordinal='1' />
+              <column datatype='real' name='median_income_range' ordinal='2' />
+              <column datatype='real' name='avg_calls_per_day' ordinal='3' />
+              <column datatype='real' name='avg_dispatch_to_arrival' ordinal='4' />
+              <column datatype='real' name='avg_received_to_arrival' ordinal='5' />
+              <column datatype='real' name='avg_received_to_complete' ordinal='6' />
+              <column datatype='real' name='avg_received_to_dispatch' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='ogrdirect.1cbk5br0axe93c10s9wxd0uhrawt' name='zipcodes.geojson' table='[zipcodes.geojson]' type='table'>
+            <columns>
+              <column datatype='integer' name='zip' ordinal='0' />
+              <column datatype='string' name='objectid' ordinal='1' />
+              <column datatype='string' name='po_name' ordinal='2' />
+              <column datatype='string' name='shape_stlength' ordinal='3' />
+              <column datatype='string' name='shape_starea' ordinal='4' />
+              <column datatype='spatial' name='Geometry' ordinal='5' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[police_vs_income.csv].[zipcode]' />
+              <expression op='[zipcodes.geojson].[zip]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.0xvtyqe0olyodn1cdkw7a04v2fbj' name='police_vs_income.csv' table='[police_vs_income#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='zipcode' ordinal='0' />
+              <column datatype='integer' name='survey_count' ordinal='1' />
+              <column datatype='real' name='median_income_range' ordinal='2' />
+              <column datatype='real' name='avg_calls_per_day' ordinal='3' />
+              <column datatype='real' name='avg_dispatch_to_arrival' ordinal='4' />
+              <column datatype='real' name='avg_received_to_arrival' ordinal='5' />
+              <column datatype='real' name='avg_received_to_complete' ordinal='6' />
+              <column datatype='real' name='avg_received_to_dispatch' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='ogrdirect.1cbk5br0axe93c10s9wxd0uhrawt' name='zipcodes.geojson' table='[zipcodes.geojson]' type='table'>
+            <columns>
+              <column datatype='integer' name='zip' ordinal='0' />
+              <column datatype='string' name='objectid' ordinal='1' />
+              <column datatype='string' name='po_name' ordinal='2' />
+              <column datatype='string' name='shape_stlength' ordinal='3' />
+              <column datatype='string' name='shape_starea' ordinal='4' />
+              <column datatype='spatial' name='Geometry' ordinal='5' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[police_vs_income.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zipcode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[zipcode]</local-name>
+            <parent-name>[police_vs_income.csv]</parent-name>
+            <remote-alias>zipcode</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_FE016F67AB4C40138EE1794187C272FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>survey_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[survey_count]</local-name>
+            <parent-name>[police_vs_income.csv]</parent-name>
+            <remote-alias>survey_count</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_FE016F67AB4C40138EE1794187C272FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>median_income_range</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[median_income_range]</local-name>
+            <parent-name>[police_vs_income.csv]</parent-name>
+            <remote-alias>median_income_range</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_FE016F67AB4C40138EE1794187C272FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_calls_per_day</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_calls_per_day]</local-name>
+            <parent-name>[police_vs_income.csv]</parent-name>
+            <remote-alias>avg_calls_per_day</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_FE016F67AB4C40138EE1794187C272FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_dispatch_to_arrival</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_dispatch_to_arrival]</local-name>
+            <parent-name>[police_vs_income.csv]</parent-name>
+            <remote-alias>avg_dispatch_to_arrival</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_FE016F67AB4C40138EE1794187C272FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_received_to_arrival</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_received_to_arrival]</local-name>
+            <parent-name>[police_vs_income.csv]</parent-name>
+            <remote-alias>avg_received_to_arrival</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_FE016F67AB4C40138EE1794187C272FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_received_to_complete</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_received_to_complete]</local-name>
+            <parent-name>[police_vs_income.csv]</parent-name>
+            <remote-alias>avg_received_to_complete</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_FE016F67AB4C40138EE1794187C272FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_received_to_dispatch</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_received_to_dispatch]</local-name>
+            <parent-name>[police_vs_income.csv]</parent-name>
+            <remote-alias>avg_received_to_dispatch</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_FE016F67AB4C40138EE1794187C272FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zip</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[zip]</local-name>
+            <parent-name>[zipcodes.geojson]</parent-name>
+            <remote-alias>zip</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_FE016F67AB4C40138EE1794187C272FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>objectid</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[objectid]</local-name>
+            <parent-name>[zipcodes.geojson]</parent-name>
+            <remote-alias>objectid</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_FE016F67AB4C40138EE1794187C272FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>po_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[po_name]</local-name>
+            <parent-name>[zipcodes.geojson]</parent-name>
+            <remote-alias>po_name</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_FE016F67AB4C40138EE1794187C272FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>shape_stlength</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[shape_stlength]</local-name>
+            <parent-name>[zipcodes.geojson]</parent-name>
+            <remote-alias>shape_stlength</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_FE016F67AB4C40138EE1794187C272FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>shape_starea</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[shape_starea]</local-name>
+            <parent-name>[zipcodes.geojson]</parent-name>
+            <remote-alias>shape_starea</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_FE016F67AB4C40138EE1794187C272FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Geometry</remote-name>
+            <remote-type>8</remote-type>
+            <local-name>[Geometry]</local-name>
+            <parent-name>[zipcodes.geojson]</parent-name>
+            <remote-alias>Geometry</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>spatial</local-type>
+            <aggregation>Collect</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_FE016F67AB4C40138EE1794187C272FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='police_vs_income.csv' datatype='table' name='[__tableau_internal_object_id__].[police_vs_income.csv_FE016F67AB4C40138EE1794187C272FE]' role='measure' type='quantitative' />
+      <column caption='Avg Calls Per Day' datatype='real' name='[avg_calls_per_day]' role='dimension' type='quantitative' />
+      <column caption='Avg Dispatch To Arrival' datatype='real' name='[avg_dispatch_to_arrival]' role='measure' type='quantitative' />
+      <column caption='Avg Received To Arrival' datatype='real' name='[avg_received_to_arrival]' role='measure' type='quantitative' />
+      <column caption='Avg Received To Complete' datatype='real' name='[avg_received_to_complete]' role='measure' type='quantitative' />
+      <column caption='Avg Received To Dispatch' datatype='real' name='[avg_received_to_dispatch]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Median Income Range' datatype='real' name='[median_income_range]' role='dimension' type='ordinal' />
+      <column caption='Objectid' datatype='string' name='[objectid]' role='dimension' type='nominal' />
+      <column caption='Po Name' datatype='string' name='[po_name]' role='dimension' type='nominal' />
+      <column caption='Shape Starea' datatype='string' name='[shape_starea]' role='dimension' type='nominal' />
+      <column caption='Shape Stlength' datatype='string' name='[shape_stlength]' role='dimension' type='nominal' />
+      <column caption='Survey Count' datatype='integer' name='[survey_count]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Zip' datatype='integer' default-format='*00000' name='[zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column aggregation='Sum' caption='Zipcode' datatype='integer' default-format='*00000' name='[zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column-instance column='[zip]' derivation='None' name='[none:zip:ok]' pivot='key' type='ordinal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='shape' field='[:Measure Names]' type='shape'>
+            <map to='circle'>
+              <bucket>&quot;[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[__tableau_internal_object_id__].[cnt:zipcodes.geojson_A201A95293994193A53146946BD219B4:qk]&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;[federated.1y9h4311ar9l7w1fo9et10gsqsq7]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:zip:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>37189</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>37221</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>37013</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>37213</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>37076</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>37217</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>37205</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>37201</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>37228</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>37080</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>37218</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>37211</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>37015</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>37214</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>37209</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>37115</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>37219</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>37206</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>37207</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>37210</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>37212</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>37203</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>37138</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>37220</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>37027</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>37215</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>37208</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>37204</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>37072</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>37216</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='police_vs_income.csv' id='police_vs_income.csv_FE016F67AB4C40138EE1794187C272FE'>
+            <properties context=''>
+              <relation join='inner' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[police_vs_income.csv].[zipcode]' />
+                    <expression op='[zipcodes.geojson].[zip]' />
+                  </expression>
+                </clause>
+                <relation connection='textscan.0xvtyqe0olyodn1cdkw7a04v2fbj' name='police_vs_income.csv' table='[police_vs_income#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype='integer' name='zipcode' ordinal='0' />
+                    <column datatype='integer' name='survey_count' ordinal='1' />
+                    <column datatype='real' name='median_income_range' ordinal='2' />
+                    <column datatype='real' name='avg_calls_per_day' ordinal='3' />
+                    <column datatype='real' name='avg_dispatch_to_arrival' ordinal='4' />
+                    <column datatype='real' name='avg_received_to_arrival' ordinal='5' />
+                    <column datatype='real' name='avg_received_to_complete' ordinal='6' />
+                    <column datatype='real' name='avg_received_to_dispatch' ordinal='7' />
+                  </columns>
+                </relation>
+                <relation connection='ogrdirect.1cbk5br0axe93c10s9wxd0uhrawt' name='zipcodes.geojson' table='[zipcodes.geojson]' type='table'>
+                  <columns>
+                    <column datatype='integer' name='zip' ordinal='0' />
+                    <column datatype='string' name='objectid' ordinal='1' />
+                    <column datatype='string' name='po_name' ordinal='2' />
+                    <column datatype='string' name='shape_stlength' ordinal='3' />
+                    <column datatype='string' name='shape_starea' ordinal='4' />
+                    <column datatype='spatial' name='Geometry' ordinal='5' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='police_vs_income' inline='true' name='federated.0m4icvf1veluat1dntz9l0p4k0ne' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='police_vs_income' name='textscan.03wdswx0bdibib16g2yq70n6y12r'>
+            <connection class='textscan' directory='C:/Users/Sean/Documents/DA12/Capstone/Metro-Nashville-Police-Response-Times-Capstone/data' filename='police_vs_income.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='zipcodes' name='ogrdirect.0btl9160fak6e91aqxhkz02qydk6'>
+            <connection class='ogrdirect' directory='C:/Users/Sean/Documents/DA12/Capstone/Metro-Nashville-Police-Response-Times-Capstone/data' filename='zipcodes.geojson' password='' server='' tablename='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.03wdswx0bdibib16g2yq70n6y12r' name='police_vs_income.csv' table='[police_vs_income#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='zipcode' ordinal='0' />
+            <column datatype='integer' name='survey_count' ordinal='1' />
+            <column datatype='real' name='median_income_range' ordinal='2' />
+            <column datatype='real' name='avg_calls_per_day' ordinal='3' />
+            <column datatype='real' name='avg_dispatch_to_arrival' ordinal='4' />
+            <column datatype='real' name='avg_received_to_arrival' ordinal='5' />
+            <column datatype='real' name='avg_received_to_complete' ordinal='6' />
+            <column datatype='real' name='avg_received_to_dispatch' ordinal='7' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.03wdswx0bdibib16g2yq70n6y12r' name='police_vs_income.csv' table='[police_vs_income#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='zipcode' ordinal='0' />
+            <column datatype='integer' name='survey_count' ordinal='1' />
+            <column datatype='real' name='median_income_range' ordinal='2' />
+            <column datatype='real' name='avg_calls_per_day' ordinal='3' />
+            <column datatype='real' name='avg_dispatch_to_arrival' ordinal='4' />
+            <column datatype='real' name='avg_received_to_arrival' ordinal='5' />
+            <column datatype='real' name='avg_received_to_complete' ordinal='6' />
+            <column datatype='real' name='avg_received_to_dispatch' ordinal='7' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[police_vs_income.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zipcode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[zipcode]</local-name>
+            <parent-name>[police_vs_income.csv]</parent-name>
+            <remote-alias>zipcode</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_3FF117A1A60F4A729F6C733B1F83FCBC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>survey_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[survey_count]</local-name>
+            <parent-name>[police_vs_income.csv]</parent-name>
+            <remote-alias>survey_count</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_3FF117A1A60F4A729F6C733B1F83FCBC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>median_income_range</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[median_income_range]</local-name>
+            <parent-name>[police_vs_income.csv]</parent-name>
+            <remote-alias>median_income_range</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_3FF117A1A60F4A729F6C733B1F83FCBC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_calls_per_day</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_calls_per_day]</local-name>
+            <parent-name>[police_vs_income.csv]</parent-name>
+            <remote-alias>avg_calls_per_day</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_3FF117A1A60F4A729F6C733B1F83FCBC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_dispatch_to_arrival</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_dispatch_to_arrival]</local-name>
+            <parent-name>[police_vs_income.csv]</parent-name>
+            <remote-alias>avg_dispatch_to_arrival</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_3FF117A1A60F4A729F6C733B1F83FCBC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_received_to_arrival</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_received_to_arrival]</local-name>
+            <parent-name>[police_vs_income.csv]</parent-name>
+            <remote-alias>avg_received_to_arrival</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_3FF117A1A60F4A729F6C733B1F83FCBC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_received_to_complete</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_received_to_complete]</local-name>
+            <parent-name>[police_vs_income.csv]</parent-name>
+            <remote-alias>avg_received_to_complete</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_3FF117A1A60F4A729F6C733B1F83FCBC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_received_to_dispatch</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_received_to_dispatch]</local-name>
+            <parent-name>[police_vs_income.csv]</parent-name>
+            <remote-alias>avg_received_to_dispatch</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[police_vs_income.csv_3FF117A1A60F4A729F6C733B1F83FCBC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='police_vs_income.csv' datatype='table' name='[__tableau_internal_object_id__].[police_vs_income.csv_3FF117A1A60F4A729F6C733B1F83FCBC]' role='measure' type='quantitative' />
+      <column caption='Avg Calls Per Day' datatype='real' name='[avg_calls_per_day]' role='dimension' type='quantitative' />
+      <column caption='Avg Dispatch To Arrival' datatype='real' name='[avg_dispatch_to_arrival]' role='measure' type='quantitative' />
+      <column caption='Avg Received To Arrival' datatype='real' name='[avg_received_to_arrival]' role='measure' type='quantitative' />
+      <column caption='Avg Received To Complete' datatype='real' name='[avg_received_to_complete]' role='measure' type='quantitative' />
+      <column caption='Avg Received To Dispatch' datatype='real' name='[avg_received_to_dispatch]' role='measure' type='quantitative' />
+      <column caption='Median Income Range' datatype='real' name='[median_income_range]' role='measure' type='quantitative' />
+      <column caption='Survey Count' datatype='integer' name='[survey_count]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Zipcode' datatype='integer' default-format='*00000' name='[zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='police_vs_income.csv' id='police_vs_income.csv_3FF117A1A60F4A729F6C733B1F83FCBC'>
+            <properties context=''>
+              <relation connection='textscan.03wdswx0bdibib16g2yq70n6y12r' name='police_vs_income.csv' table='[police_vs_income#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='zipcode' ordinal='0' />
+                  <column datatype='integer' name='survey_count' ordinal='1' />
+                  <column datatype='real' name='median_income_range' ordinal='2' />
+                  <column datatype='real' name='avg_calls_per_day' ordinal='3' />
+                  <column datatype='real' name='avg_dispatch_to_arrival' ordinal='4' />
+                  <column datatype='real' name='avg_received_to_arrival' ordinal='5' />
+                  <column datatype='real' name='avg_received_to_complete' ordinal='6' />
+                  <column datatype='real' name='avg_received_to_dispatch' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <datasource-relationships>
+    <datasource-relationship source='federated.0m4icvf1veluat1dntz9l0p4k0ne' target='federated.1y9h4311ar9l7w1fo9et10gsqsq7'>
+      <column-mapping />
+    </datasource-relationship>
+  </datasource-relationships>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <shared-views>
+    <shared-view name='federated.1y9h4311ar9l7w1fo9et10gsqsq7'>
+      <datasources>
+        <datasource caption='zipcodes' name='federated.1y9h4311ar9l7w1fo9et10gsqsq7' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1y9h4311ar9l7w1fo9et10gsqsq7'>
+        <column aggregation='Sum' caption='Median Income Range' datatype='real' name='[median_income_range]' role='dimension' type='ordinal' />
+        <column-instance column='[median_income_range]' derivation='None' name='[none:median_income_range:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[zipcode]' derivation='None' name='[none:zipcode:ok]' pivot='key' type='ordinal' />
+        <column aggregation='Sum' caption='Zipcode' datatype='integer' default-format='*00000' name='[zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:median_income_range:ok]'>
+        <groupfilter function='level-members' level='[none:median_income_range:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+        <target field='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:median_income_range:ok]' />
+      </filter>
+      <filter class='categorical' column='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:zipcode:ok]'>
+        <groupfilter function='level-members' level='[none:zipcode:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+        <target field='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:zipcode:ok]' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <worksheets>
+    <worksheet name='Avg Calls'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='10' underline='true'>Calls per Day</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='zipcodes' name='federated.1y9h4311ar9l7w1fo9et10gsqsq7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1y9h4311ar9l7w1fo9et10gsqsq7'>
+            <column-instance column='[avg_calls_per_day]' derivation='Avg' name='[avg:avg_calls_per_day:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Calls Per Day' datatype='real' name='[avg_calls_per_day]' role='dimension' type='quantitative' />
+            <column aggregation='Sum' caption='Median Income Range' datatype='real' name='[median_income_range]' role='dimension' type='ordinal' />
+            <column-instance column='[median_income_range]' derivation='None' name='[none:median_income_range:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[zipcode]' derivation='None' name='[none:zipcode:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Sum' caption='Zipcode' datatype='integer' default-format='*00000' name='[zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:zipcode:ok]</column>
+            <column>[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:median_income_range:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='left' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='left' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[avg:avg_calls_per_day:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{58FC5F6B-D461-4491-99A8-4856457E57AA}' />
+    </worksheet>
+    <worksheet name='Call to Arrival'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='10' underline='true'>Call to Arrival(min)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='zipcodes' name='federated.1y9h4311ar9l7w1fo9et10gsqsq7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1y9h4311ar9l7w1fo9et10gsqsq7'>
+            <column-instance column='[avg_received_to_arrival]' derivation='Avg' name='[avg:avg_received_to_arrival:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Received To Arrival' datatype='real' name='[avg_received_to_arrival]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Median Income Range' datatype='real' name='[median_income_range]' role='dimension' type='ordinal' />
+            <column-instance column='[median_income_range]' derivation='None' name='[none:median_income_range:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[zipcode]' derivation='None' name='[none:zipcode:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Sum' caption='Zipcode' datatype='integer' default-format='*00000' name='[zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:zipcode:ok]</column>
+            <column>[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:median_income_range:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='left' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='left' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[avg:avg_received_to_arrival:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{D173A095-AF76-41B7-BAC7-2B6385F3BFF6}' />
+    </worksheet>
+    <worksheet name='Call to Complete'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='10' underline='true'>Call to Complete(min)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='zipcodes' name='federated.1y9h4311ar9l7w1fo9et10gsqsq7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1y9h4311ar9l7w1fo9et10gsqsq7'>
+            <column-instance column='[avg_received_to_complete]' derivation='Avg' name='[avg:avg_received_to_complete:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Received To Complete' datatype='real' name='[avg_received_to_complete]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Median Income Range' datatype='real' name='[median_income_range]' role='dimension' type='ordinal' />
+            <column-instance column='[median_income_range]' derivation='None' name='[none:median_income_range:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[zipcode]' derivation='None' name='[none:zipcode:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Sum' caption='Zipcode' datatype='integer' default-format='*00000' name='[zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:zipcode:ok]</column>
+            <column>[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:median_income_range:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='left' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='left' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[avg:avg_received_to_complete:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{38CF3426-2F65-4BFA-A769-7379AD8EC82F}' />
+    </worksheet>
+    <worksheet name='Dispatch Time'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='10' underline='true'>Call to Dispatch(min)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='zipcodes' name='federated.1y9h4311ar9l7w1fo9et10gsqsq7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1y9h4311ar9l7w1fo9et10gsqsq7'>
+            <column-instance column='[avg_received_to_dispatch]' derivation='Avg' name='[avg:avg_received_to_dispatch:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Received To Dispatch' datatype='real' name='[avg_received_to_dispatch]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Median Income Range' datatype='real' name='[median_income_range]' role='dimension' type='ordinal' />
+            <column-instance column='[median_income_range]' derivation='None' name='[none:median_income_range:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[zipcode]' derivation='None' name='[none:zipcode:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Sum' caption='Zipcode' datatype='integer' default-format='*00000' name='[zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:zipcode:ok]</column>
+            <column>[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:median_income_range:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='left' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='left' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[avg:avg_received_to_dispatch:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{4D95DDA7-B128-4A84-A77E-F9B755FFD6D4}' />
+    </worksheet>
+    <worksheet name='Map'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' underline='true'>Nashville Counties: Police Response vs Income</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='zipcodes' name='federated.1y9h4311ar9l7w1fo9et10gsqsq7' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1y9h4311ar9l7w1fo9et10gsqsq7'>
+            <column datatype='spatial' name='[Geometry]' role='measure' type='nominal' />
+            <column-instance column='[avg_received_to_arrival]' derivation='Avg' name='[avg:avg_received_to_arrival:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Calls Per Day' datatype='real' name='[avg_calls_per_day]' role='dimension' type='quantitative' />
+            <column caption='Avg Received To Arrival' datatype='real' name='[avg_received_to_arrival]' role='measure' type='quantitative' />
+            <column-instance column='[Geometry]' derivation='Collect' name='[clct:Geometry:nk]' pivot='key' type='nominal' />
+            <column aggregation='Sum' caption='Median Income Range' datatype='real' name='[median_income_range]' role='dimension' type='ordinal' />
+            <column-instance column='[avg_calls_per_day]' derivation='None' name='[none:avg_calls_per_day:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[median_income_range]' derivation='None' name='[none:median_income_range:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[zip]' derivation='None' name='[none:zip:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[zipcode]' derivation='None' name='[none:zipcode:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Sum' caption='Zip' datatype='integer' default-format='*00000' name='[zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+            <column aggregation='Sum' caption='Zipcode' datatype='integer' default-format='*00000' name='[zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:zipcode:ok]</column>
+            <column>[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:median_income_range:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[Longitude (generated)]' field-type='quantitative' max='-9611670.2927933428' min='-9713637.2117791642' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[Latitude (generated)]' field-type='quantitative' max='4362261.6058799345' min='4295296.0996932527' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='caption'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='4' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#e2e6f0' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.25999999046325684' />
+            <format attr='map-style' value='outdoors' />
+            <format attr='wrap' value='false' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='County' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:zip:ok]' />
+              <lod column='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[avg:avg_received_to_arrival:qk]' />
+              <lod column='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[clct:Geometry:nk]' />
+              <lod column='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:median_income_range:ok]' />
+              <lod column='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:avg_calls_per_day:qk]' />
+              <geometry column='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[clct:Geometry:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.0099999997764825821' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[Latitude (generated)]</rows>
+        <cols>[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{59FD3958-4237-4342-965E-956E62E209C7}' />
+    </worksheet>
+    <worksheet name='Travel Time'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='10' underline='true'>Travel Time(min)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='zipcodes' name='federated.1y9h4311ar9l7w1fo9et10gsqsq7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1y9h4311ar9l7w1fo9et10gsqsq7'>
+            <column-instance column='[avg_dispatch_to_arrival]' derivation='Avg' name='[avg:avg_dispatch_to_arrival:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Dispatch To Arrival' datatype='real' name='[avg_dispatch_to_arrival]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Median Income Range' datatype='real' name='[median_income_range]' role='dimension' type='ordinal' />
+            <column-instance column='[median_income_range]' derivation='None' name='[none:median_income_range:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[zipcode]' derivation='None' name='[none:zipcode:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Sum' caption='Zipcode' datatype='integer' default-format='*00000' name='[zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:zipcode:ok]</column>
+            <column>[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:median_income_range:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='left' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='left' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[avg:avg_dispatch_to_arrival:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{6C7B5730-B917-4449-A962-3EDC7C57F007}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='1800' maxwidth='3500' minheight='1800' minwidth='3500' preset-index='17' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='zipcodes' name='federated.1y9h4311ar9l7w1fo9et10gsqsq7' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1y9h4311ar9l7w1fo9et10gsqsq7'>
+        <column aggregation='Sum' caption='Median Income Range' datatype='real' name='[median_income_range]' role='dimension' type='ordinal' />
+        <column-instance column='[median_income_range]' derivation='None' name='[none:median_income_range:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[zipcode]' derivation='None' name='[none:zipcode:ok]' pivot='key' type='ordinal' />
+        <column aggregation='Sum' caption='Zipcode' datatype='integer' default-format='*00000' name='[zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='54833' id='15' param='horz' type-v2='layout-flow' w='48571' x='15914' y='22167'>
+          <zone fixed-size='1415' h='54833' id='3' is-fixed='true' name='Map' w='40429' x='15914' y='22167'>
+            <layout-cache minwidth='202' type-h='fixed' type-w='scalable' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='2' />
+              <format attr='margin' value='0' />
+              <format attr='padding' value='0' />
+            </zone-style>
+          </zone>
+          <zone h='54833' id='7' param='vert' type-v2='layout-flow' w='8142' x='56343' y='22167'>
+            <zone forceUpdate='true' h='2611' id='13' type-v2='text' w='8028' x='56400' y='22278'>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='12' underline='true'>Average Police Metrics</run>
+              </formatted-text>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='7' />
+              </zone-style>
+            </zone>
+            <zone h='4222' id='8' name='Avg Calls' w='8028' x='56400' y='24889'>
+              <layout-cache fixed-size-h='68' type-h='fixed' type-w='cell' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='4222' id='9' name='Dispatch Time' w='8028' x='56400' y='29111'>
+              <layout-cache fixed-size-h='68' type-h='fixed' type-w='cell' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='4222' id='10' name='Travel Time' w='8028' x='56400' y='33333'>
+              <layout-cache fixed-size-h='68' type-h='fixed' type-w='cell' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='4222' id='11' name='Call to Arrival' w='8028' x='56400' y='37555'>
+              <layout-cache fixed-size-h='68' type-h='fixed' type-w='cell' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='4222' id='12' name='Call to Complete' w='8028' x='56400' y='41777'>
+              <layout-cache fixed-size-h='68' type-h='fixed' type-w='cell' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone forceUpdate='true' h='2611' id='14' type-v2='text' w='8028' x='56400' y='45999'>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='12' underline='true'>Filters</run>
+              </formatted-text>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='7' />
+              </zone-style>
+            </zone>
+            <zone h='3888' id='5' mode='dropdown' name='Map' param='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:median_income_range:ok]' type-v2='filter' values='database' w='8028' x='56400' y='48610'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='3888' id='4' mode='dropdown' name='Map' param='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:zipcode:ok]' type-v2='filter' values='database' w='8028' x='56400' y='52498'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='2' />
+              <format attr='margin' value='0' />
+              <format attr='background-color' value='#e2e6f0' />
+            </zone-style>
+          </zone>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='950' minheight='950' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='17' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99112' id='16' param='vert' type-v2='layout-flow' w='99542' x='229' y='444'>
+                <zone h='3888' id='5' mode='dropdown' name='Map' param='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:median_income_range:ok]' type-v2='filter' values='database' w='8028' x='56400' y='48610'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3888' id='4' mode='dropdown' name='Map' param='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:zipcode:ok]' type-v2='filter' values='database' w='8028' x='56400' y='52498'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='54833' id='3' is-fixed='true' name='Map' w='40429' x='15914' y='22167'>
+                  <layout-cache minwidth='202' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='2611' id='13' type-v2='text' w='8028' x='56400' y='22278'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='12' underline='true'>Average Police Metrics</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='68' h='4222' id='8' is-fixed='true' name='Avg Calls' w='8028' x='56400' y='24889'>
+                  <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='68' h='4222' id='9' is-fixed='true' name='Dispatch Time' w='8028' x='56400' y='29111'>
+                  <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='68' h='4222' id='10' is-fixed='true' name='Travel Time' w='8028' x='56400' y='33333'>
+                  <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='68' h='4222' id='11' is-fixed='true' name='Call to Arrival' w='8028' x='56400' y='37555'>
+                  <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='68' h='4222' id='12' is-fixed='true' name='Call to Complete' w='8028' x='56400' y='41777'>
+                  <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='2611' id='14' type-v2='text' w='8028' x='56400' y='45999'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='12' underline='true'>Filters</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{0638D5B2-295E-4E18-9C68-F77972DEB26E}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.5' source-height='75'>
+    <window class='worksheet' name='Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='4' param='[federated.1y9h4311ar9l7w1fo9et10gsqsq7].[none:zip:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{38F81CD5-FB5C-42F2-9A3E-C027EDADFA8B}' />
+    </window>
+    <window class='worksheet' name='Avg Calls'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CFD89CE0-F453-463C-B463-111285E79335}' />
+    </window>
+    <window class='worksheet' name='Dispatch Time'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5E856D2E-BD1C-40EF-9D1B-ACF776EDE718}' />
+    </window>
+    <window class='worksheet' name='Travel Time'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A3733584-0FC2-4762-93A0-8D54FF7B43CB}' />
+    </window>
+    <window class='worksheet' name='Call to Arrival'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{45D182DD-EFBC-40C4-886E-90BF506DA5A7}' />
+    </window>
+    <window class='worksheet' name='Call to Complete'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D9EE2B67-320D-46AA-AF2B-78832E3323AA}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Avg Calls'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Call to Arrival'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Call to Complete'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Dispatch Time'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Map'>
+          <zoom type='entire-view' />
+          <default-map-tool-selection tool='1' />
+        </viewpoint>
+        <viewpoint name='Travel Time'>
+          <zoom type='fit-width' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{A736AE61-F0B4-4597-B5A2-7FE692098838}' />
+    </window>
+  </windows>
+</workbook>
